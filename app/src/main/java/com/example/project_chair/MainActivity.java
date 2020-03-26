@@ -82,17 +82,7 @@ public class MainActivity extends AppCompatActivity {
                                                                                                     map.put("password", password);
                                                                                                     String id = mAuth.getCurrentUser().getUid();
 
-                                                                                                    mDatabase.child("Users").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                                                                        @Override
-                                                                                                        public void onComplete(@NonNull Task<Void> task2) {
-                                                                                                            if (task2.isSuccessful()) {
-                                                                                                                startActivity(new Intent(MainActivity.this, ProfileActivity.class));
-                                                                                                                finish();
-                                                                                                            } else {
-                                                                                                                Toast.makeText(MainActivity.this, "No se pudo crear los datos correctamente", Toast.LENGTH_SHORT).show();
-                                                                                                            }
-                                                                                                        }
-                                                                                                    });
+
 
 
                                                                                                 } else {
